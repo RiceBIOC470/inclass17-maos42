@@ -24,9 +24,7 @@ figure (3); plot(diffs);
 
 [~,overlap]=min(diffs);
 img2align=[zeros(limg1,limg1-overlap-98),img2]; %won't let me shift x 
-
 figure (4); imshowpair(img1,img2align);
-
 
 %Fourier
 img1ft=fft2(img1);
@@ -49,6 +47,7 @@ imgshift((end-(limg1-1)):end,(end-(limg1-1):end))=img2;
 
 figure (6); imshowpair(img1,imgshift);
 
+%proper alignment: X=200 Y=200 
 
 
 
